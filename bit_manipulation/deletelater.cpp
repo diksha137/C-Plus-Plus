@@ -39,7 +39,7 @@ std::uint64_t rightmostsetbit(std :: int64_t n) { // int64_t is preferred over i
     //Here log2 will return you, number of times we can express that number in power of two.
     //For all binary number containing only rightmost set bit as 1 like 2 , 4, 8, 16, 32….
     //We will find that position of right most set bit is always equals to log2(Number)+1
-    return static_cast<int64_t>(log2(n & -n) + 1);
+    return narrow_cast<double>(log2(n & -n) + 1);
 
 }
 }  // namespace rightmost_set_bit
